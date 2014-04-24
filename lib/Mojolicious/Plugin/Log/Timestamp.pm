@@ -3,7 +3,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 
 use Mojar::Log;
 
-our $VERSION = 0.011;
+our $VERSION = 0.012;
 
 sub register {
   my ($self, $app, $cfg) = @_;
@@ -34,17 +34,22 @@ log timestamps in your web application.
 
 =head1 USAGE
 
-Simply add the plugin as shown above and you will get fairly compact ISO
-timestamps.  To set a custom timestamp pattern, just pass it to the plugin.
+Simply add the plugin as shown above and you will get fairly compact ISO-style
+timestamps as '%Y%m%d %H:%M:%S'.  To set a custom timestamp pattern, just pass
+it to the plugin.
 
   # Mojolicious
-  $self->plugin('Log::Timestamp' => {pattern => '%F %X'});
+  $self->plugin('Log::Timestamp' => {pattern => '%F %X '});
 
   # Mojolicious::Lite
-  plugin 'Log::Timestamp' => {pattern => '%F %X'};
+  plugin 'Log::Timestamp' => {pattern => '%F %X '};
 
-See L<Mojar::Log> for more examples.  In addition to 'pattern', you can include
-any of the usual L<Mojo::Log> parameters such as 'path' and 'level'.
+See L<Mojar::Log> for more examples.  If you want ISO 8601, use '%FT%X ',
+optionally omitting the 'T'.  Trailing whitespace is significant.  If you want
+ultra compact, try '%y%m%d%H%M%S'.
+
+In addition to 'pattern', you can include any of the usual L<Mojo::Log>
+parameters such as 'path' and 'level'.
 
 =head1 METHODS
 
