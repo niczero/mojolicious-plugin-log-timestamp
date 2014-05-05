@@ -1,6 +1,6 @@
 use Mojolicious::Lite;
 
-plugin 'Log::Timestamp' => {pattern => '%y%m%d%H%M%S'};
+plugin 'Log::Timestamp' => {pattern => '%y%m%d%H%M%S', path => '/tmp/xxx.log'};
 
 get '/' => sub {
   my $self = shift;
@@ -12,8 +12,8 @@ __DATA__
 
 @@ index.html.ep
 % layout 'default';
-% title 'Welcome';
-Welcome to the Mojolicious real-time web framework!
+% title 'Sample';
+Welcome to Mojolicious with customised log timestamps!
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
