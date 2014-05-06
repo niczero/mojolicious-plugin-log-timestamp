@@ -1,3 +1,6 @@
+0.022 2014-05-06
+  * Added missing dependency.
+
 0.021 2014-05-05
   * Added test for timestamp pattern.
 
