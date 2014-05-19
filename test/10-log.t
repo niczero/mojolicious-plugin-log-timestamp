@@ -3,7 +3,6 @@ use Test::More;
 
 use File::Spec::Functions 'catfile';
 use File::Temp 'tempdir';
-use Mojar::Util 'dumper';
 use Mojo::Util 'slurp';
 use Mojolicious;
 use Mojolicious::Plugin::Log::Timestamp;

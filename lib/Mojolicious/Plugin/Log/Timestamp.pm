@@ -3,7 +3,7 @@ use Mojo::Base 'Mojolicious::Plugin';
 
 use Mojar::Log;
 
-our $VERSION = 0.022;
+our $VERSION = 0.023;
 
 sub register {
   my ($self, $app, $cfg) = @_;

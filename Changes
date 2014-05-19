@@ -1,3 +1,6 @@
+0.023 2014-05-19
+  * Minor fixes to Makefile and test.
+
 0.022 2014-05-06
   * Added missing dependency.
 
