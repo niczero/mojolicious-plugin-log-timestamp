@@ -1,17 +1,21 @@
+0.031 2017-03-30
+  - Upgrade for Mojo::File.
+  - Minor tweak to package syntax.
+
 0.023 2014-05-19
-  * Minor fixes to Makefile and test.
+  - Minor fixes to Makefile and test.
 
 0.022 2014-05-06
-  * Added missing dependency.
+  - Add missing dependency.
 
 0.021 2014-05-05
-  * Added test for timestamp pattern.
+  - Add test for timestamp pattern.
 
 0.012 2014-04-24
-  * Added examples to documentation.
+  - Add examples to documentation.
 
 0.011 2014-04-21
-  * Added plugin.
+  - Add plugin.
 
 0.001 2014-04-16
-  * Initial packaging.
+  - Initial packaging.

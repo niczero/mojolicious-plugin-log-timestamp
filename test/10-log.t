@@ -3,7 +3,7 @@ use Test::More;
 
 use File::Spec::Functions 'catfile';
 use File::Temp 'tempdir';
-use Mojo::Util 'slurp';
+use Mojo::File 'path';
 use Mojolicious;
 use Mojolicious::Plugin::Log::Timestamp;
 
@@ -13,12 +13,12 @@ my $app = Mojolicious->new;
 my $plugin = Mojolicious::Plugin::Log::Timestamp->new;
 
 $plugin->register($app => {pattern => 'xxx', path => $file});
-my $log = slurp $file;
+my $log = path($file)->slurp;
 like $log, qr{xxx\[debug\] }, q{right message using pattern};
 
 $app->log->pattern('%y%m%d%H%M%S');
 $app->log->info('Z');
-$log = slurp $file;
+$log = path($file)->slurp;
 like $log, qr{\b\d{12}\[info\] Z}, q{right message using datetime};
 
 done_testing();

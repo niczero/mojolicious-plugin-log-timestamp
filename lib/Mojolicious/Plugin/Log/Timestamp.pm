@@ -1,9 +1,9 @@
 package Mojolicious::Plugin::Log::Timestamp;
-use Mojo::Base 'Mojolicious::Plugin';
+use Mojolicious::Plugin -base;
 
 use Mojar::Log;
 
-our $VERSION = 0.023;
+our $VERSION = 0.031;
 
 sub register {
   my ($self, $app, $cfg) = @_;
@@ -67,17 +67,16 @@ Register plugin in L<Mojolicious> application.
 Usually you want your log timestamps to just do their job in the fewest
 characters practical.  And everyone is entitled to their own view as to what a
 log timestamp should look like.  Personally I usually choose '%y%m%d %X'.  But
-none of this deservers absorbing your attention, so you just use the plugin and
+none of this merits absorbing your attention, so you just use the plugin and
 get on with the real work.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2014, Nic Sandfield.
+Copyright (c) 2014--2017, Nic Sandfield.
 
 This program is free software, you can redistribute it and/or modify it under
 the terms of the Artistic License version 2.0.
 
 =head1 SEE ALSO
 
-L<Mojar::Log>, L<Mojo::Log>, L<Mojolicious::Plugin::Log::Access>,
-L<Mojolicious::Guides>.
+L<Mojar::Log>, L<Mojo::Log>, L<Mojolicious::Plugin::Log::Access>.
